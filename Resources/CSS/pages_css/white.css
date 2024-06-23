@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.whitebg{
+    background-image: url(../../Html_img/Whitebgi.png);
+    min-height:100vh;
+    min-width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+ }

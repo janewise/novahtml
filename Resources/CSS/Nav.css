@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+  /* ^^^^to make logo back ground blur ****/
+  .logo-container {
+    display: inline-block;
+    position: relative; /* Ensure the container is positioned */
+    width: 70px; /* Adjust width and height as needed */
+    height: 70px; /* Adjust width and height as needed */
+    border-radius: 50%;
+  }
+
+
+.logo-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: conic-gradient(from 0deg, rgba(0, 225, 255, 0.7), rgba(248, 25, 185, 0.7), rgb(248, 25, 186,0.7), rgba(33, 0, 251, 0.7));
+  border-radius: 50%;
+  filter: blur(6px);
+  z-index: -1; /* Ensure the pseudo-element is behind the content */
+}
+
+/* to protect from image being blur */
+.logoblur {
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative; /* Ensure the image stays in the right place */
+  z-index: 1; /* Ensure the image is above the blurred background */
+  margin: 5px;
+}
+
+/* for Img  */
+.navlogo {
+  width: 50px;
+  height: 50px;
+  margin: 5px 10px 10px 5px;
+  padding: 0;
+} 
+
+/* Logo title */
+.logotitle{
+  width: 100px;
+  position: relative;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #67EDFF 0%, #FF00B8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  bottom: 34%;
+  left: -7%;
+}
+
+
+/* ^^^^for Nav background and Offcanvas *****/
+.fixed-top{
+    position: absolute;
+    top: 0;
+}
+/* nav bar bgcolor */
+.navbar{
+    background-color: rgba(36, 39, 68, 0.51);
+ }
+
+/* -- For Navigation Link text and hover active -- */
+.nav-link:link,
+.nav-link:visited{
+    color: #ffffff;
+    font-size: 1.5rem;
+    padding-top:4px ;
+    padding-bottom: 4px;
+}
+
+.nav-link:hover{
+    background-color: rgba(94, 158, 255, 0.51);
+    color: #fff;
+    border-radius: 5px;
+}
+.active{
+    color: #ffffff !important;
+    border-bottom: 3px solid #fff;
+    border-radius: 0;
+}
+
+/*--* nav bar toggler *--*/
+
+.navbar-toggler{
+    color: transparent;
+    background-color: rgba(193, 198, 236, 0.3);
+}
+
+.navbar-toggler:active{
+    background-color: rgba(193, 198, 236, 0.7);
+}
+
+.btn-close{
+    color: transparent;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-close:active{
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+  /* From down here are Media quaries for Nav */
+  /* to make logo back ground blur */
+
+/* logo responsive */
+@media (max-width:767px){
+  .navlogo {
+    width: 40px;
+    height: 40px;
+  } 
+  .logo-container {
+   width: 60px; 
+    height: 60px; 
+  }
+
+  /* Logo title */
+.logotitle{
+  font-size: 9px;
+  font-weight: 500;
+  bottom: 35%;
+  left: -10%;
+}
+}
+
+/*--* Offcanvas navbar appear *--*/
+@media (max-width:767px){
+    .navbar {
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
+
+    .offcanvas-title{
+        background: linear-gradient(90deg, #67EDFF 0%, #FF00B8 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .offcanvas{
+        background-color: rgba(36, 39, 68, 0.71);
+        backdrop-filter: blur(6px);
+    }
+
+    .nav-link{
+    text-align: center;
+}
+.navbar-nav{
+    min-height: 65vh;
+    align-items: stretch;
+}
+
+  }

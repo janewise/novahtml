@@ -1,0 +1,63 @@
+body{
+    background-image: url(../../Html_img/Roadmapbg.png);
+    min-height:100vh;
+    min-width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.roadbg-box{   
+    /* for roadmap imgae to be center between left and right */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:4rem 0.5rem 3rem;
+    }
+
+    .roadbg-box img{
+        width: 40%;
+        height: 60%;
+    }
+    
+    @media (max-width:1024px){
+        .roadbg-box img{
+            width: 50%;
+            height: 70%;
+        }
+      }
+    
+      @media (max-width:767px){
+        .roadbg-box img{
+            width: 400px;
+            height: 450px;
+        }
+      }
+    
+      @media (max-width:700px){
+        .roadbg-box img{
+            width: 400px;
+            height: 450px;
+        }
+      }
+    
+      @media (max-width:570px){
+        .roadbg-box img{
+            width: 380px;
+            height: 430px;
+        }
+      }
+    
+      @media (max-width:400px){
+        .roadbg-box img{
+            width: 350px;
+            height: 430px;
+        }
+      }
+    
+      @media (max-width:340px){
+        .roadbg-box img{
+            width: 290px;
+            height: 400px;
+        }
+      }
