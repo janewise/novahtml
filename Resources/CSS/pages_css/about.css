@@ -123,3 +123,11 @@ body{
      }
   }
 
+  @media (max-width:350px){
+    .icon{
+        font-size: 20px;
+        margin: 0 5px 0 5px;
+    }
+  }
+
+
